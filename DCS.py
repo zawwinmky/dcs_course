@@ -53,10 +53,21 @@ from itertools import count
 
 #For question 6
 
-number=0
-while number <3:
-    num_1=float(input("Enter first number"))
-    num_2=float(input("Enter second number"))
-    print("The result is:", num_1 * num_2)
-    number += 1
+# number=0
+# while number <3:
+#     num_1=float(input("Enter first number"))
+#     num_2=float(input("Enter second number"))
+#     print("The result is:", num_1 * num_2)
+#     number += 1
 
+#For question 7
+
+mark = int(input("Enter your marks"))
+if mark < 0 or mark > 100:
+    print("Invalid marks")
+elif mark >=75 :
+    print("Pass with credit")
+elif mark >=40:
+    print("Pass without credit")
+else:
+    print("Fail")
