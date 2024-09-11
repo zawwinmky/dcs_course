@@ -1,3 +1,5 @@
+# DCS 146 (SSM-16042) Assignment
+
 # For question 1
 num1 = int(input("Enter first number"))
 num2 = int(input("Enter second number"))
