@@ -135,3 +135,39 @@ print("The number of passed students", passed(mark_list))
 print("The number of failed students", failed(mark_list))
 print("The max num in", mark_list, "is", max_num(mark_list))
 print("The min num in", mark_list, "is", min_num(mark_list))
+
+#For question 6
+def get_choice():
+    while True:
+        choice = int(input("""Choose from 1 to 9 
+1. To input sudent marks
+3. To display Total score
+2.To display the number of students
+4. To display Average score
+5. To display Maximum score
+6. To display Minimum score
+7. To display Number of student who Passed the exam
+8. To display Number of student who Failed the exam
+9. Exit program"""))
+        
+        if choice == 1:
+            print(f"The marks of the students: {get_marks()}")
+        elif choice == 2:
+            print("Something")
+        elif choice == 3:
+            print("Something")
+        elif choice == 4:
+            print("Something")
+        elif choice == 5:
+            print("Something")
+        elif choice == 4:
+            print("Something")
+        elif choice == 6:
+            print("Something")
+        elif choice == 7:
+            print("Something")
+        elif choice == 8:
+            print("Something")
+        elif choice == 9:
+            break
+get_choice()
