@@ -1,73 +1,5 @@
-##### DCS-146 (SSM-16042)
-
-
-# For Question 1
-print("DCS-146 (SSM-16042) Function in python assignment")
-print("This is for Question No.1")
-print("To find the area of the triangle")
-def triangle_area (h,w):
-    triangle = 0.5 * h * w
-    return triangle
-
-height = float(input("Enter height"))
-width = float(input("Enter width"))
-
-print(f"Triangle Area is {triangle_area(height,width)}")
-
-#For Question 2
-import math
-print()
-print("This is for Question No.2")
-print("To find the area of the circle")
-def get_radius():
-    radius = float(input("Enter the radius of the circle"))
-    return radius
-
-def circle_area(r):
-    return math.pi * r ** 2
-
-radius1 = get_radius()
-result = circle_area(radius1)
-
-print(f"The area of the circle is {result}")
-
-
-#Question 3
-print()
-print("This is for Question No.3")
-def total_score(scores):
-    total = 0
-    for score in scores:
-        total += score
-    return total
-
-scores_list=[10,20,30,40,50]
-
-total_result = total_score(scores_list)
-average = total_result / len(scores_list)
-print(f"The total is {total_result} and the average is {average}")
-
-
-
-#For question 4
-print()
-print("This is for Question No.4")
-
-def score_list():
-    list = []
-    for x in range(5):
-        list.append(int(input("Enter score")))
-    return list
-def total_score(scores):
-    total = 0
-    for score in scores:
-        total += score
-    return total
-print("The total score is ", total_score(score_list()))
-
 
 #For question 5
-print()
 print("This is for Question No.5")
 print("The functions are called and tested in question no.6")
 
@@ -90,8 +22,8 @@ def get_marks():
 # Function to get the total marks of the students
 def total(marks):
     total_mark = 0
-    for mark in marks:
-        total_mark += mark
+    for x in marks:
+        total_mark += x
     return total_mark
 
 #function to get the average marks of the students
@@ -141,7 +73,6 @@ def min_num(marks):
 
 
 #For question 6
-print()
 print("This is for Question No.6")
 def get_choice():
     data_empty = 1
@@ -161,7 +92,6 @@ def get_choice():
         print()
         choice = int(input("Choose form the above option"))
         if 1 < choice < 9 and data_empty ==1:   #to ensure the students marks are entered first
-            print()
             print("You need to enter the students marks first")
         elif choice == 1 and data_empty == 1:  #to input the marks of the students
             data_empty = 0
