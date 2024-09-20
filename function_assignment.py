@@ -159,47 +159,48 @@ def get_choice():
 8. To display Number of student who Failed the exam
 9. To Exit program""")
         print()
-        choice = int(input("Choose form the above option"))
-        if 1 < choice < 9 and data_empty ==1:   #to ensure the students marks are entered first
-            print()
-            print("You need to enter the students marks first")
-        elif choice == 1 and data_empty == 1:  #to input the marks of the students
-            data_empty = 0
-            mark_list = get_marks()
-            print()
-            print(f"The marks of the students{mark_list}")
-        elif choice == 1 and data_empty == 0: #not to input the data again
-            print()
-            print("The data already exists")
-        elif 1 < choice < 9 and data_empty == 0: #to ensure the input is between 1 and 9 and the data is not empty
-            if choice == 2:
+        try:
+            choice = int(input("Choose form the above option"))
+            if 1 < choice < 9 and data_empty ==1:   #to ensure the students marks are entered first
                 print()
-                print(f"The total number of students: {len(mark_list)}")
-            elif choice == 3:
+                print("You need to enter the students marks first")
+            elif choice == 1 and data_empty == 1:  #to input the marks of the students
+                data_empty = 0
+                mark_list = get_marks()
                 print()
-                print(f"The total scores of the students: {total(mark_list)}")
-            elif choice == 4:
+                print(f"The marks of the students{mark_list}")
+            elif choice == 1 and data_empty == 0: #not to input the data again
                 print()
-                print(f"The average score {average(mark_list)}")
-            elif choice == 5:
+                print("The data already exists")
+            elif 1 < choice < 9 and data_empty == 0: #to ensure the input is between 1 and 9 and the data is not empty
+                if choice == 2:
+                    print()
+                    print(f"The total number of students: {len(mark_list)}")
+                elif choice == 3:
+                    print()
+                    print(f"The total scores of the students: {total(mark_list)}")
+                elif choice == 4:
+                    print()
+                    print(f"The average score {average(mark_list)}")
+                elif choice == 5:
+                    print()
+                    print(f"The maximum mark is {max_num(mark_list)}")
+                elif choice == 6:
+                    print()
+                    print(f"The minimum mark is {min_num(mark_list)}")
+                elif choice == 7:
+                    print ()
+                    print(f"The number of passed students {passed(mark_list)}")
+                elif choice == 8:
+                    print()
+                    print(f"The number of failed students {failed(mark_list)}")
+            elif choice == 9: #to exit the loop
                 print()
-                print(f"The maximum mark is {max_num(mark_list)}")
-            elif choice == 6:
+                print("Thank you!")
+                break
+            else: #for selection less than 1 and greater then 9
                 print()
-                print(f"The minimum mark is {min_num(mark_list)}")
-            elif choice == 7:
-                print ()
-                print(f"The number of passed students {passed(mark_list)}")
-            elif choice == 8:
-                print()
-                print(f"The number of failed students {failed(mark_list)}")
-            else:
-                print("Invalid input")
-        elif choice == 9: #to exit the loop
-            print()
-            print("Thank you!")
-            break
-        else: #for selection less than 1 and greater then 9
-            print()
-            print("Invalid choice, pls select between 1 to 9")
+                print("Invalid choice, pls select between 1 to 9")
+        except ValueError:
+            print("You can only input number here!")
 get_choice()
